@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>법무법인 여온 | 위험운전치상·음주인피 종합 대응 센터</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root { --yeoon-blue: #000814; --yeoon-gold: #D4AF37; --danger-red: #E63946; }
+        body { background-color: var(--yeoon-blue); color: #F8F9FA; font-family: -apple-system, "SF Pro Display", "Noto Sans KR", sans-serif; letter-spacing: -0.05em; line-height: 1.6; }
+        .mono { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: rgba(255,255,255,0.2); }
+        
+        .scan-anim {
+            position: absolute; width: 100%; height: 8vh;
+            background: linear-gradient(to bottom, transparent, rgba(230, 57, 70, 0.35), transparent);
+            animation: scan 4s infinite ease-in-out;
+            z-index: 10; pointer-events: none;
+        }
+        @keyframes scan { 0% { top: -10%; } 100% { top: 110%; } }
+
+        .grid-bg {
+            background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: 1.2s cubic-bezier(0.16, 1, 0.3, 1); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        .dashboard-card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); border-top: 1px solid var(--yeoon-gold); backdrop-filter: blur(40px); transition: 0.5s; }
+        .dashboard-card:hover { border-color: var(--danger-red); transform: translateY(-5px); }
+
+        .gif-frame { border-radius: 32px; overflow: hidden; position: relative; border: 1px solid rgba(255,255,255,0.1); height: clamp(350px, 60vh, 550px); background: #000; }
+        
+        .cta-button { background: white; color: black; padding: 22px 70px; border-radius: 100px; font-size: 1.4rem; font-weight: 900; transition: 0.4s; }
+        .cta-button:hover { background: var(--yeoon-gold); color: white; transform: scale(1.05); }
+
+        .hero-sub-text { font-size: clamp(1rem, 3.2vw, 2.4rem); white-space: nowrap; font-weight: 300; color: rgba(255,255,255,0.4); }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden grid-bg">
+
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden border-b border-white/10">
+        <div class="scan-anim"></div>
+        <div class="absolute inset-0 opacity-15 grayscale" style="background-image: url('accident-crisis.jpg'); background-size: cover;"></div>
+        
+        <div class="relative z-20 text-center px-6 max-w-7xl">
+            <div class="text-[#D4AF37] text-[11px] tracking-[0.6em] mb-10 font-bold uppercase">종합 방어 전략 시스템 가동중</div>
+            <h1 class="text-5xl md:text-[8.5rem] font-black italic tracking-tighter text-white mb-6 leading-[0.9]">
+                징역 1년~15년
+            </h1>
+            <p class="hero-sub-text italic mb-12">
+                감당하기 힘든 무게를 마주하셨나요?
+            </p>
+            <p class="text-white/60 text-lg md:text-2xl font-light max-w-5xl mx-auto leading-relaxed break-keep">
+                술을 마신 뒤 사람을 상해에 이르게 한 순간, <br> 법은 이미 당신을 '실형' 예정자라 판단하고 있습니다. </br>
+            </p>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 max-w-7xl mx-auto">
+        <div class="flex flex-col lg:flex-row items-center gap-20 mb-40">
+            <div class="reveal gif-frame w-full lg:w-3/5 shadow-2xl">
+                <img src="car-accident.gif" alt="자동차 사고 포렌식" class="w-full h-full object-cover opacity-60">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                <div class="absolute top-8 left-8 text-danger-red font-black mono text-sm">[ 분석대상 : 자동차 중상해 추돌 ]</div>
+            </div>
+            <div class="reveal w-full lg:w-2/5 space-y-8">
+                <h2 class="text-4xl md:text-5xl font-black italic text-white leading-tight">실형 구형이 예고된 사고,<br>탈출구는 명분뿐입니다.</h2>
+                <p class="text-white/40 text-xl font-light leading-relaxed break-keep">
+                    수사관은 이미 당신을 잠재적 범죄자로 규정했습니다. 여온은 사고 당시의 물리적 한계를 입증하여 특가법의 칼날을 무디게 만듭니다.
+                </p>
+                <button class="text-yeoon-gold font-bold underline decoration-2 underline-offset-8 hover:text-white transition">분석 기술 자세히 보기 →</button>
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row-reverse items-center gap-20">
+            <div class="reveal gif-frame w-full lg:w-3/5 shadow-2xl">
+                <img src="bike-accident.gif" alt="오토바이 사고 포렌식" class="w-full h-full object-cover opacity-60">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+                <div class="absolute top-8 left-8 text-danger-red font-black mono text-sm">[ 분석대상 : 이륜차 인피 사고 ]</div>
+            </div>
+            <div class="reveal w-full lg:w-2/5 space-y-8 text-left lg:text-right">
+                <h2 class="text-4xl md:text-5xl font-black italic text-white leading-tight">이륜차 사고의 편견,<br>데이터로 승부하십시오.</h2>
+                <p class="text-white/40 text-xl font-light leading-relaxed break-keep">
+                    적대적인 피해자와의 감정적 소모는 형량만 키웁니다. 여온의 전략적 합의와 양형 데이터가 당신을 일상으로 복귀시키는 유일한 열쇠입니다.
+                </p>
+                <button class="text-yeoon-gold font-bold underline decoration-2 underline-offset-8 hover:text-white transition">분석 기술 자세히 보기 →</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 bg-white/[0.02] border-y border-white/5">
+        <div class="max-w-7xl mx-auto reveal">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl md:text-[6.5rem] font-black italic text-white mb-6 tracking-tighter underline decoration-danger-red decoration-4">증명된 15인의 생존 기록</h2>
+                <p class="text-white/30 text-lg md:text-2xl italic">위험운전치상·인피 사고를 뒤집은 여온의 실제 판결 기록</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <script>
+                    const cases = [
+                        { title: "BAC 0.21% 고수치 추돌", res: "영장 기각 / 집행유예", logic: "영상 판독 결과 선행차량 과실 입증" },
+                        { title: "오토바이 인도 주행 인피", res: "벌금형 사수", logic: "피해자 기왕증 분리 및 전략적 합의" },
+                        { title: "킥보드 만취 보행자 충돌", res: "기소유예 성공", logic: "상해 요건 부인 및 법리적 반박 성공" },
+                        { title: "스쿨존 내 어린이 치상", res: "실형 방어 성공", logic: "사고 발생 불가피성 데이터 제시" },
+                        { title: "사고 후 미조치(뺑소니)", res: "혐의없음 무죄", logic: "인지 불능 상태 디지털 포렌식 증명" },
+                        { title: "집행유예 기간 중 사고재범", res: "금고형 영장 기각", logic: "사회적 유대 관계 데이터화로 선처" },
+                        { title: "만취 상태 주차장 인피", res: "무죄 판결", logic: "도로 외 구역 특수 법리 인과 부정" },
+                        { title: "고속도로 3중 추돌 사고", res: "집행유예 확정", logic: "피해자 5인 처벌불원서 확보 대행" },
+                        { title: "BAC 0.18% 택시 충돌", res: "벌금형 방어", logic: "택시 기사 직업적 합의 전략 적용" },
+                        { title: "숙취운전 출근길 사고", res: "면허 정지 감경", logic: "알코올 소실률 재계산 수치 반박" },
+                        { title: "동승자 중상해 위험운전", res: "실형 면제", logic: "피해자와의 특수 관계 및 우발성 강조" },
+                        { title: "이륜차 신호위반 인피", res: "벌금형 선처", logic: "상대 차량 과실 비율 재산정 및 삭감" },
+                        { title: "킥보드 횡단보도 충돌", res: "벌금형 종결", logic: "PM 특성 고려 법리적 선처 명분 구축" },
+                        { title: "음주운전 중 가로수 추돌", res: "집행유예 사수", logic: "기계적 결함 데이터 및 양형 보강" },
+                        { title: "전치 14주 중상해 사고", res: "구속영장 기각", logic: "방어권 보장 필요성 및 분석 데이터 제출" }
+                    ];
+                    document.write(cases.map((c, i) => `
+                        <div class="dashboard-card p-8 min-h-[300px] flex flex-col justify-between rounded-[24px]">
+                            <div>
+                                <span class="mono text-danger-red font-bold uppercase mb-4 block tracking-widest text-[9px]">기록_파일_번호_0${i+1}</span>
+                                <h3 class="text-xl font-bold mb-3 italic text-white leading-tight">${c.title}</h3>
+                                <div class="text-2xl font-black text-[#D4AF37] mb-6">${c.res}</div>
+                            </div>
+                            <p class="text-white/40 text-xs italic font-light border-t border-white/5 pt-6 leading-relaxed">
+                                <span class="text-white font-bold not-italic">여온의 전략:</span> ${c.logic}
+                            </p>
+                        </div>
+                    `).join(''));
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-32 px-6 max-w-7xl mx-auto reveal">
+        <div class="grid lg:grid-cols-2 gap-10 items-stretch">
+            <div class="dashboard-card rounded-[40px] overflow-hidden group">
+                <div class="aspect-[4/5] bg-gray-900 relative">
+                    <img src="lawyer-profile.jpg" alt="법무법인 여온 대표 변호사" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#000814] via-transparent to-transparent"></div>
+                    <div class="absolute bottom-10 left-10">
+                        <h3 class="text-4xl font-black italic text-white mb-2 tracking-tighter">당신의 마지막 방패</h3>
+                        <p class="text-yeoon-gold text-lg font-bold">법무법인 여온 대표 변호인단</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-6">
+                <div class="dashboard-card rounded-[40px] flex-1 p-10 flex flex-col justify-center space-y-6">
+                    <h3 class="text-3xl font-black italic text-white">"차가운 데이터 뒤에는<br>당신을 향한 따뜻한 공감이 있습니다."</h3>
+                    <p class="text-white/50 text-lg font-light leading-relaxed break-keep">
+                        여온의 변호사들은 단순히 법전만을 보지 않습니다. 의뢰인이 처한 절박한 상황을 직접 듣고, 그 안에서 단 하나의 생존 명분을 찾아내기 위해 수만 건의 판례를 뒤집습니다.
+                    </p>
+                </div>
+                <div class="gif-frame h-1/2">
+                    <img src="consultation-scene.jpg" alt="의뢰인 상담 현장" class="w-full h-full object-cover opacity-60">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-6 left-8 text-white font-bold text-sm">실제 의뢰인과의 상담 현장</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-56 px-6 text-center relative overflow-hidden">
+        <div class="scan-anim" style="opacity: 0.15; animation-duration: 8s;"></div>
+        <div class="reveal max-w-6xl mx-auto relative z-20">
+            <h2 class="text-6xl md:text-[9.5rem] font-black italic mb-20 tracking-tighter leading-[0.85] text-white">
+                사건 해결을 넘어<br>
+                <span class="text-[#D4AF37]">해방을 드립니다.</span>
+            </h2>
+            <p class="text-white/40 text-xl md:text-3xl font-light mb-20 max-w-4xl mx-auto leading-relaxed italic break-keep">
+                당신을 짓누르는 사고의 무게, 여온의 시스템이 끊어내겠습니다. 징역형의 갈림길, 지금 여온에서 당신만의 생존 명분을 찾으십시오.
+            </p>
+            <button class="cta-button" onclick="alert('비공개 전략 회의 예약으로 이동합니다.')">비공개 방문 상담 신청</button>
+        </div>
+    </section>
+
+    <footer class="py-20 border-t border-white/5 text-center text-white/10 text-[10px] tracking-[0.4em] font-light italic">
+        © 2026 법무법인 여온. 사고·인피 종합 대응 센터. ALL RIGHTS RESERVED.
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
